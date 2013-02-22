@@ -4,3 +4,30 @@
 [submodule "bundle/git-gutter-vim"]
 	path = bundle/git-gutter-vim
 	url = git://github.com/akiomik/git-gutter-vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/clang-commplete"]
+	path = bundle/clang-commplete
+	url = git://github.com/Rip-Rip/clang_complete.git
+[submodule "bundle/drawit"]
+	path = bundle/drawit
+	url = git://github.com/vim-scripts/DrawIt.git
+[submodule "bundle/minibufexpl"]
+	path = bundle/minibufexpl
+	url = git://github.com/fholgado/minibufexpl.vim.git
+[submodule "bundle/omnicppcomplete"]
+	path = bundle/omnicppcomplete
+	url = git://github.com/yandy/vim-omnicppcomplete.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/tsaleh/vim-supertab.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/cscope"]
+	path = bundle/cscope
+	url = git://github.com/vim-scripts/cscope.vim.git
+[submodule "bundle/srcexpl"]
+	path = bundle/srcexpl
+	url = git://github.com/vim-scripts/SrcExpl.git
