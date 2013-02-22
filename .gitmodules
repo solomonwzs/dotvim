@@ -31,3 +31,12 @@
 [submodule "bundle/srcexpl"]
 	path = bundle/srcexpl
 	url = git://github.com/vim-scripts/SrcExpl.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+    url = git://github.com/majutsushi/tagbar
