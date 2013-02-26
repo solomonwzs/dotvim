@@ -43,3 +43,6 @@
 [submodule "bundle/tagbar-phpctags"]
 	path = bundle/tagbar-phpctags
 	url = git://github.com/techlivezheng/tagbar-phpctags.git
+[submodule "bundle/phpctags"]
+	path = bundle/phpctags
+	url = git://github.com/techlivezheng/phpctags.git
