@@ -46,3 +46,9 @@
 [submodule "bundle/phpctags"]
 	path = bundle/phpctags
 	url = git://github.com/techlivezheng/phpctags.git
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = git://github.com/joonty/vdebug.git
+[submodule "bundle/vim-debug"]
+	path = bundle/vim-debug
+	url = git://github.com/jabapyth/vim-debug.git

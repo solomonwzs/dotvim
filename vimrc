@@ -67,3 +67,6 @@ let g:tagbar_phpctags_bin='/home/solomon/.vim/bundle/phpctags/phpctags'
 let g:tagbar_type_javascript = {
             \ 'ctagsbin' : 'jsctags'
             \ }
+
+" Setting for clang-complete
+let g:clang_use_library=1
