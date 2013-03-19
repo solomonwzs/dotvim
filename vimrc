@@ -33,11 +33,11 @@ set modeline
 set hlsearch
 set nu
 
-colorscheme evening
-highlight Directory cterm=bold ctermfg=4
-highlight Comment cterm=bold ctermfg=4
-highlight PmenuSel cterm=bold ctermbg=4 ctermfg=7
-highlight LineNr cterm=reverse,bold ctermbg=0 ctermfg=7
+colorscheme elflord
+"highlight Directory cterm=bold ctermfg=4
+"highlight Comment cterm=bold ctermfg=4
+"highlight PmenuSel cterm=bold ctermbg=4 ctermfg=7
+"highlight LineNr cterm=reverse,bold ctermbg=0 ctermfg=7
 
 "set nocp
 "filetype plugin indent on
