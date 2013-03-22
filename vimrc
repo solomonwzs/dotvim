@@ -33,6 +33,8 @@ set modeline
 set hlsearch
 set nu
 
+set encoding=utf-8
+
 colorscheme elflord
 "highlight Directory cterm=bold ctermfg=4
 "highlight Comment cterm=bold ctermfg=4
@@ -70,3 +72,7 @@ let g:tagbar_type_javascript = {
 
 " Setting for clang-complete
 let g:clang_use_library=1
+
+" Setting for powerline
+let g:Powerline_symbols='compatible'
+set t_Co=256

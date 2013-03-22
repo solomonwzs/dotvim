@@ -52,3 +52,12 @@
 [submodule "bundle/vim-debug"]
 	path = bundle/vim-debug
 	url = git://github.com/jabapyth/vim-debug.git
+[submodule "bundle/xmledit"]
+	path = bundle/xmledit
+	url = git://github.com/sukima/xmledit.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://github.com/wincent/Command-T.git
