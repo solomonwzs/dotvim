@@ -35,6 +35,10 @@ set nu
 
 set encoding=utf-8
 
+set foldmethod=indent
+set nofoldenable
+set foldlevel=1
+
 colorscheme elflord
 "highlight Directory cterm=bold ctermfg=4
 "highlight Comment cterm=bold ctermfg=4
