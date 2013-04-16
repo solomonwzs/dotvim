@@ -80,3 +80,30 @@ let g:clang_use_library=1
 " Setting for powerline
 let g:Powerline_symbols='compatible'
 set t_Co=256
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cscope setting
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("cscope")
+    set csprg=/usr/bin/cscope
+    set csto=1
+    set cst
+    set nocsverb
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    endif
+    set csverb
+endif
+
+nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>u :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
+            \:!cscope -b -i cscope.files -f cscope.out<CR>
+            \:cs reset<CR>
