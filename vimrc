@@ -96,14 +96,22 @@ if has("cscope")
     set csverb
 endif
 
-nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 nmap <C-@>u :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
             \:!cscope -b -i cscope.files -f cscope.out<CR>
             \:cs reset<CR>
+nmap <C-@>S :scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>G :scs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>C :scs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>T :scs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>E :scs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>F :scs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-@>I :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-@>D :scs find d <C-R>=expand("<cword>")<CR><CR>
