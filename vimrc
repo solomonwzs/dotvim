@@ -57,12 +57,6 @@ autocmd Filetype xml    set omnifunc=xmlcomplete#CompleteTags
 autocmd Filetype python set omnifunc=pythoncomplete#CompleteTags
 autocmd Filetype tex    set omnifunc=syntaxcomplete#Complete
 
-" Save session on quitting Vim
-autocmd VimLeave * NERDTreeClose
-autocmd VimLeave * mksession! .mysession
-" Restore session on starting Vim
-autocmd VimEnter * NERDTree
-
 let g:miniBufExplMapCTabSwitchBufs=1
 
 " Settings for taglist
