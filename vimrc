@@ -57,6 +57,12 @@ autocmd Filetype xml    set omnifunc=xmlcomplete#CompleteTags
 autocmd Filetype python set omnifunc=pythoncomplete#CompleteTags
 autocmd Filetype tex    set omnifunc=syntaxcomplete#Complete
 
+" Save session on quitting Vim
+autocmd VimLeave * NERDTreeClose
+autocmd VimLeave * mksession! .mysession
+" Restore session on starting Vim
+autocmd VimEnter * NERDTree
+
 let g:miniBufExplMapCTabSwitchBufs=1
 
 " Settings for taglist
@@ -115,3 +121,8 @@ nmap <C-@>E :scs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-@>F :scs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-@>I :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-@>D :scs find d <C-R>=expand("<cword>")<CR><CR>
+
+" Octave Syntax
+augroup filetypedetect
+    au! BufRead,BufNewFile *.m,*.oct setfiletype octave
+augroup END 
