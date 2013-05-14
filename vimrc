@@ -33,7 +33,7 @@ set modeline
 set hlsearch
 set nu
 
-set encoding=utf-8
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 
 set foldmethod=indent
 set nofoldenable
@@ -115,8 +115,3 @@ nmap <C-@>E :scs find e <C-R>=expand("<cword>")<CR><CR>
 nmap <C-@>F :scs find f <C-R>=expand("<cfile>")<CR><CR>
 nmap <C-@>I :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 nmap <C-@>D :scs find d <C-R>=expand("<cword>")<CR><CR>
-
-" Octave Syntax
-augroup filetypedetect
-    au! BufRead,BufNewFile *.m,*.oct setfiletype octave
-augroup END 
