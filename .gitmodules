@@ -25,9 +25,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
-[submodule "bundle/cscope"]
-	path = bundle/cscope
-	url = git://github.com/vim-scripts/cscope.vim.git
 [submodule "bundle/srcexpl"]
 	path = bundle/srcexpl
 	url = git://github.com/vim-scripts/SrcExpl.git

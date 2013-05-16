@@ -86,7 +86,7 @@ set t_Co=256
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("cscope")
     set csprg=/usr/bin/cscope
-    set csto=1
+    set csto=0
     set cst
     set nocsverb
     " add any database in current directory
@@ -96,22 +96,24 @@ if has("cscope")
     set csverb
 endif
 
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>:copen<CR>
+nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:copen<CR>
+nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 nmap <C-@>u :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
             \:!cscope -bq -i cscope.files -f cscope.out<CR>
             \:cs reset<CR>
-nmap <C-@>S :scs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>S :scs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 nmap <C-@>G :scs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>C :scs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>T :scs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>E :scs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>F :scs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <C-@>I :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <C-@>D :scs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-@>C :scs find c <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-@>T :scs find t <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-@>E :scs find e <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+nmap <C-@>F :scs find f <C-R>=expand("<cfile>")<CR><CR>:copen<CR>
+nmap <C-@>I :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:copen<CR>
+nmap <C-@>D :scs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>
+
+set cscopequickfix=s-,d-,c-,t-,e-,f-,i-
