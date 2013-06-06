@@ -16,9 +16,6 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = git://github.com/fholgado/minibufexpl.vim.git
-[submodule "bundle/omnicppcomplete"]
-	path = bundle/omnicppcomplete
-	url = git://github.com/yandy/vim-omnicppcomplete.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/tsaleh/vim-supertab.git
