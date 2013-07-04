@@ -81,6 +81,10 @@ let g:clang_use_library=1
 let g:Powerline_symbols='compatible'
 set t_Co=256
 
+" Setting got thrift
+au BufRead,BufNewFile *.thrift set filetype=thrift
+au! Syntax thrift source /usr/share/vim/vimfiles/syntax/thrift.vim
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
