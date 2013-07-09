@@ -117,3 +117,6 @@ nmap <C-@>I :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:copen<CR>
 nmap <C-@>D :scs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 
 set cscopequickfix=s-,d-,c-,t-,e-,f-,i-
+
+" Setting for vim-markdown
+let g:vim_markdown_folding_disabled=1

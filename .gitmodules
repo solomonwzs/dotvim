@@ -64,3 +64,9 @@
 [submodule "bundle/omnicppcomplete"]
 	path = bundle/omnicppcomplete
 	url = git://github.com/vim-scripts/OmniCppComplete.git
+[submodule "bundle/vim-voom"]
+	path = bundle/vim-voom
+	url = https://github.com/vim-scripts/VOoM.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
