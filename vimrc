@@ -81,6 +81,13 @@ let g:clang_use_library=1
 let g:Powerline_symbols='compatible'
 set t_Co=256
 
+" Setting for thrift
+au BufRead,BufNewFile *.thrift set filetype=thrift
+au! Syntax thrift source /usr/share/vim/vimfiles/syntax/thrift.vim
+
+" Setting for vim-erlang-tags
+:set runtimepath^=/home/solomon/.vim/bundle/vim-erlang-tags
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " cscope setting
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
