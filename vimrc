@@ -17,7 +17,8 @@ call pathogen#infect()
 " Or better yet, read /usr/share/vim/vim72/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
 
-" let mapleader=","
+let mapleader=","
+let g:mapleader=","
 
 syntax enable
 
@@ -30,8 +31,8 @@ filetype indent on
 
 set modeline
 
-set hlsearch
-set nu
+set number
+set ruler
 
 set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 
@@ -40,23 +41,29 @@ set nofoldenable
 set foldlevel=1
 
 colorscheme elflord
-"highlight Directory cterm=bold ctermfg=4
-"highlight Comment cterm=bold ctermfg=4
-"highlight PmenuSel cterm=bold ctermbg=4 ctermfg=7
-"highlight LineNr cterm=reverse,bold ctermbg=0 ctermfg=7
-
-"set nocp
-"filetype plugin indent on
 
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
-autocmd Filetype c      set omnifunc=ccomplete#Complete
-autocmd Filetype html   set omnifunc=htmlcomplete#CompleteTags
-autocmd Filetype xml    set omnifunc=xmlcomplete#CompleteTags
+autocmd Filetype c set omnifunc=ccomplete#Complete
+autocmd Filetype html,markdown set omnifunc=htmlcomplete#CompleteTags
+autocmd Filetype xml set omnifunc=xmlcomplete#CompleteTags
 autocmd Filetype python set omnifunc=pythoncomplete#CompleteTags
-autocmd Filetype tex    set omnifunc=syntaxcomplete#Complete
+autocmd Filetype tex set omnifunc=syntaxcomplete#Complete
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
+" Setting for search
+set hlsearch
+set magic
+
+" Auto reload file
+set autoread
+
+" Setting for row control
+set linebreak
+set wrap
+
+" Setting for miniBufExplorer
 let g:miniBufExplMapCTabSwitchBufs=1
 
 " Settings for taglist
@@ -127,3 +134,7 @@ set cscopequickfix=s-,d-,c-,t-,e-,f-,i-
 
 " Setting for vim-markdown
 let g:vim_markdown_folding_disabled=1
+
+" Setting for syntastic
+let g:syntastic_error_symbol='X'
+let g:syntastic_warning_symbol='!'
