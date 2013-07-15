@@ -45,12 +45,13 @@ colorscheme elflord
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
-autocmd Filetype c set omnifunc=ccomplete#Complete
-autocmd Filetype html,markdown set omnifunc=htmlcomplete#CompleteTags
-autocmd Filetype xml set omnifunc=xmlcomplete#CompleteTags
-autocmd Filetype python set omnifunc=pythoncomplete#CompleteTags
-autocmd Filetype tex set omnifunc=syntaxcomplete#Complete
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd Filetype c setlocal omnifunc=ccomplete#Complete
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd Filetype xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd Filetype python setlocal omnifunc=pythoncomplete#CompleteTags
+autocmd Filetype tex setlocal omnifunc=syntaxcomplete#Complete
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 
 " Setting for search
 set hlsearch
