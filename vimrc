@@ -46,12 +46,15 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
 autocmd Filetype c setlocal omnifunc=ccomplete#Complete
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 autocmd Filetype html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd Filetype xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd Filetype python setlocal omnifunc=pythoncomplete#CompleteTags
 autocmd Filetype tex setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+
+" Setting for javacompile
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 
 " Setting for search
 set hlsearch
@@ -94,11 +97,9 @@ au BufRead,BufNewFile *.thrift set filetype=thrift
 au! Syntax thrift source /usr/share/vim/vimfiles/syntax/thrift.vim
 
 " Setting for vim-erlang-tags
-:set runtimepath^=/home/solomon/.vim/bundle/vim-erlang-tags
+set runtimepath^=/home/solomon/.vim/bundle/vim-erlang-tags
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" cscope setting
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setting for cscope setting
 if has("cscope")
     set csprg=/usr/bin/cscope
     set csto=0
@@ -139,3 +140,6 @@ let g:vim_markdown_folding_disabled=1
 " Setting for syntastic
 let g:syntastic_error_symbol='X'
 let g:syntastic_warning_symbol='!'
+
+" Mapping
+inoremap <expr><CR> pumvisible()?"\<C-Y>":"\<CR>"
