@@ -149,6 +149,21 @@ function s:FindPrevNonBlankNonComment(lnum)
     return lnum
 endfunction
 
+function s:FindPrevKeyWord(lnum)
+    let i=a:lnum-1
+    let keys=['after', 'try', 'receive', 'end', 'end,']
+    while i>0
+        let line=getline(i)
+        for key in keys
+            "if line=~# '^[^%]*\<'.key.'\>\s*\%(%.*\)\=$'
+            if line=~# '^[^%]*\<'.key.'\>'
+                return [i, key]
+        endfor
+        let i=i-1
+    endwhile
+    return []
+endfunction
+
 " The function returns the indentation level of the line adjusted to a mutiple
 " of 'shiftwidth' option.
 "
@@ -182,7 +197,17 @@ function ErlangIndent()
         let ind = ind + 2*&sw
     endif
     if currline =~# '^\s*end\>'
-        let ind = ind - 2*&sw
+        let prevkey=s:FindPrevKeyWord(v:lnum)
+        if !empty(prevkey) && prevkey[1]=='after'
+            let prevkey=s:FindPrevKeyWord(prevkey[0])
+            if !empty(prevkey) && prevkey[1]=='try'
+                let ind=ind-1*&sw
+            else
+                let ind=ind-2*&sw
+            endif
+        else
+            let ind=ind-2*&sw
+        endif
     endif
     if currline =~# '^\s*after\>'
         let plnum = s:FindPrevNonBlankNonComment(v:lnum-1)
