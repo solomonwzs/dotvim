@@ -105,7 +105,7 @@ if has("cscope")
     set csto=0
     set cst
     set nocsverb
-    " add any database in current directory
+    " Add any database in current directory
     if filereadable("cscope.out")
         cs add cscope.out
     endif
@@ -143,3 +143,8 @@ let g:syntastic_warning_symbol='!'
 
 " Mapping
 inoremap <expr><CR> pumvisible()?"\<C-Y>":"\<CR>"
+
+" Restore cursor position
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+endif
