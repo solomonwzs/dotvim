@@ -140,6 +140,7 @@ let g:vim_markdown_folding_disabled=1
 " Setting for syntastic
 let g:syntastic_error_symbol='X'
 let g:syntastic_warning_symbol='!'
+let g:syntastic_python_checkers=['flake8']
 
 " Mapping
 inoremap <expr><CR> pumvisible()?"\<C-Y>":"\<CR>"
