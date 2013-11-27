@@ -79,3 +79,9 @@
 [submodule "bundle/w3m"]
 	path = bundle/w3m
 	url = https://github.com/yuratomo/w3m.vim.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
