@@ -120,7 +120,7 @@ nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>:copen<CR>
 nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:copen<CR>
 nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>
-nmap <C-@>u :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
+nmap <C-@>u :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' -o -iname '*.cc' > cscope.files<CR>
             \:!cscope -bq -i cscope.files -f cscope.out<CR>
             \:cs reset<CR>
 nmap <C-@>S :scs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
