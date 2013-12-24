@@ -88,3 +88,6 @@
 [submodule "bundle/awk-support"]
 	path = bundle/awk-support
 	url = https://github.com/vim-scripts/awk-support.vim.git
+[submodule "bundle/awk-vim"]
+	path = bundle/awk-vim
+	url = https://github.com/vim-scripts/awk.vim.git
