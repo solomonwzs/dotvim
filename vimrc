@@ -80,7 +80,7 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close=1
 
 " Settings for tagbar
-let g:tagbar_phpctags_bin='/home/solomon/.vim/bundle/phpctags/phpctags'
+let g:tagbar_phpctags_bin='$HOME/.vim/bundle/phpctags/phpctags'
 let g:tagbar_type_javascript = {
             \ 'ctagsbin' : 'jsctags'
             \ }
@@ -166,6 +166,3 @@ highlight! link w3mHitAHint  Question
 highlight! link w3mAnchor    Label
 let g:w3m#disable_default_keymap=0
 let g:w3m#search_engine='%s'
-
-" Setting for Google c style
-au BufRead,BufNewFile *.c set filetype=cpp
