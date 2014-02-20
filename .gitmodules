@@ -91,3 +91,6 @@
 [submodule "bundle/awk-vim"]
 	path = bundle/awk-vim
 	url = https://github.com/vim-scripts/awk.vim.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim
