@@ -40,7 +40,7 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=1
 
-colorscheme elflord
+colorscheme candy
 
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
