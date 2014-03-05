@@ -94,9 +94,9 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
-[submodule "bundle/align"]
-	path = bundle/align
-	url = https://github.com/vim-scripts/Align.git
 [submodule "bundle/atp-vim"]
 	path = bundle/atp-vim
 	url = git://git.code.sf.net/p/atp-vim/code
+[submodule "bundle/align"]
+	path = bundle/align
+	url = https://github.com/vim-scripts/Align.git
