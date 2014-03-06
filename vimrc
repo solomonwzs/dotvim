@@ -175,3 +175,4 @@ let g:ctrlp_regexp=1
 let g:ctrlp_reuse_window='netrw\|help\|quickfix'
 let g:ctrlp_user_command=['.git', 'cd %s && git ls-files']
 let g:ctrlp_open_new_file='h'
+let g:ctrlp_working_path_mode='rw'
