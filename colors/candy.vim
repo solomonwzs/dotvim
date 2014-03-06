@@ -55,7 +55,8 @@ hi Title        gui=BOLD guifg=#f0f0f8 guibg=NONE
 hi Visual       gui=NONE guifg=#e0e0f0 guibg=#707080
 
 " Syntax group
-hi Comment      gui=NONE guifg=#c0c0d0 guibg=NONE
+" hi Comment      gui=NONE guifg=#c0c0d0 guibg=NONE
+hi Comment      gui=NONE guifg=#40ffff guibg=NONE ctermfg=DarkCyan
 hi Constant     gui=NONE guifg=#90d0ff guibg=NONE
 hi Error        gui=BOLD guifg=#ffffff guibg=#ff0088
 hi Identifier   gui=NONE guifg=#40f0f0 guibg=NONE
