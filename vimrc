@@ -22,9 +22,11 @@ let g:mapleader=","
 
 syntax enable
 
-set sw=4
-set ts=4
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
+set textwidth=80
 set smarttab
 set autoindent
 filetype plugin indent on
@@ -43,7 +45,7 @@ set foldlevel=1
 colorscheme candy
 
 set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
+let g:tex_flavor="latex"
 
 autocmd Filetype c setlocal omnifunc=ccomplete#Complete
 autocmd Filetype html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -52,9 +54,12 @@ autocmd Filetype python setlocal omnifunc=pythoncomplete#CompleteTags
 autocmd Filetype tex setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 
+let g:html_indent_inctags="li"
+autocmd FileType html,xml setlocal sw=2 tabstop=2 softtabstop=2
+
 " Setting for javacompile
-autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+" autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+" autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 
 " Setting for search
 set hlsearch
