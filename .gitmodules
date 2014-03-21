@@ -97,3 +97,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/dockerfile-vim"]
+	path = bundle/dockerfile-vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
