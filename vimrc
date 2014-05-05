@@ -93,8 +93,8 @@ let g:tagbar_type_javascript = {
 let g:clang_use_library=1
 
 " Setting for powerline
-let g:Powerline_symbols='compatible'
-set t_Co=256
+" let g:Powerline_symbols='compatible'
+" set t_Co=256
 
 " Setting for thrift
 au BufRead,BufNewFile *.thrift set filetype=thrift
@@ -180,3 +180,14 @@ let g:ctrlp_reuse_window='netrw\|help\|quickfix'
 let g:ctrlp_user_command=['.git', 'cd %s && git ls-files']
 let g:ctrlp_open_new_file='h'
 let g:ctrlp_working_path_mode='rw'
+
+"Setting for git-gutter
+highlight GitGutterAdd ctermbg=black ctermfg=green
+highlight GitGutterChange ctermbg=black ctermfg=yellow
+highlight GitGutterDelete ctermbg=black ctermfg=red
+highlight GitGutterChangeDelete ctermbg=black ctermfg=red
+
+"Setting for vim-airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
+set laststatus=2
