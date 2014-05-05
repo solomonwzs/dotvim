@@ -94,7 +94,6 @@ let g:clang_use_library=1
 
 " Setting for powerline
 " let g:Powerline_symbols='compatible'
-" set t_Co=256
 
 " Setting for thrift
 au BufRead,BufNewFile *.thrift set filetype=thrift
@@ -188,6 +187,7 @@ highlight GitGutterDelete ctermbg=black ctermfg=red
 highlight GitGutterChangeDelete ctermbg=black ctermfg=red
 
 "Setting for vim-airline
+set t_Co=256
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 set laststatus=2
