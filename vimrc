@@ -62,7 +62,7 @@ set cursorline
 highlight clear CursorLine
 highlight LineNR ctermfg=242
 highlight CursorLineNR cterm=bold ctermfg=255
-highlight CursorLine ctermbg=237
+highlight CursorLine ctermbg=236
 augroup CursorLine
     au!
     au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
@@ -94,13 +94,13 @@ set wrap
 
 
 " Settings for taglist
-let Tlist_Use_Right_Window=1
-let Tlist_Auto_Open=0
-let Tlist_Enable_Fold_Column=0
-let Tlist_Compact_Format=0
-let Tlist_WinWidth=28
-let Tlist_Exit_OnlyWindow=1
-let Tlist_File_Fold_Auto_Close=1
+" let Tlist_Use_Right_Window=1
+" let Tlist_Auto_Open=0
+" let Tlist_Enable_Fold_Column=0
+" let Tlist_Compact_Format=0
+" let Tlist_WinWidth=28
+" let Tlist_Exit_OnlyWindow=1
+" let Tlist_File_Fold_Auto_Close=1
 
 
 " Settings for tagbar
@@ -202,7 +202,7 @@ let g:w3m#disable_default_keymap=0
 let g:w3m#search_engine='%s'
 
 
-"Setting for ctrlp
+" Setting for ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp
 let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_switch_buffer='Et'
@@ -213,14 +213,34 @@ let g:ctrlp_open_new_file='h'
 let g:ctrlp_working_path_mode='rw'
 
 
-"Setting for git-gutter
+" Setting for git-gutter
 highlight GitGutterAdd ctermbg=black ctermfg=green
 highlight GitGutterChange ctermbg=black ctermfg=yellow
 highlight GitGutterDelete ctermbg=black ctermfg=red
 highlight GitGutterChangeDelete ctermbg=black ctermfg=red
 
 
-"Setting for vim-airline
+" Setting for vim-airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 set laststatus=2
+" let g:airline_theme="bubblegum"
+
+let g:airline_theme_patch_func = 'AirlineThemePatch'
+function! AirlineThemePatch(palette)
+    let a:palette.inactive.airline_x[2]=232
+    let a:palette.inactive.airline_x[3]=238
+
+    let a:palette.inactive.airline_y[2]=232
+    let a:palette.inactive.airline_y[3]=236
+
+    let a:palette.inactive.airline_z[2]=240
+    let a:palette.inactive.airline_z[3]=234
+
+    " let a:palette.inactive.airline_a[2]=100
+
+    " let a:palette.inactive.airline_b[2]=244
+
+    let a:palette.inactive.airline_c[2]=232
+    let a:palette.inactive.airline_c[3]=240
+endfunction
