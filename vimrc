@@ -62,7 +62,7 @@ set cursorline
 highlight clear CursorLine
 highlight LineNR ctermfg=242
 highlight CursorLineNR cterm=bold ctermfg=255
-highlight CursorLine ctermbg=237
+"highlight CursorLine ctermbg=237
 
 
 " Setting for javacompile
