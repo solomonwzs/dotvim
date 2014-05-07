@@ -216,7 +216,6 @@ highlight GitGutterChangeDelete ctermbg=black ctermfg=red
 
 
 "Setting for vim-airline
-set t_Co=256
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
 set laststatus=2
