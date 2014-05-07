@@ -62,7 +62,12 @@ set cursorline
 highlight clear CursorLine
 highlight LineNR ctermfg=242
 highlight CursorLineNR cterm=bold ctermfg=255
-"highlight CursorLine ctermbg=237
+highlight CursorLine ctermbg=237
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
 
 
 " Setting for javacompile
