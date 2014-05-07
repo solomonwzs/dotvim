@@ -17,6 +17,10 @@ call pathogen#infect()
 " Or better yet, read /usr/share/vim/vim72/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
 
+set t_Co=256
+
+colorscheme candy
+
 let mapleader=","
 let g:mapleader=","
 
@@ -41,8 +45,6 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=1
 
-colorscheme candy
-
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor="latex"
 
@@ -56,23 +58,35 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 let g:html_indent_inctags="li"
 autocmd FileType html,xml setlocal sw=2 tabstop=2 softtabstop=2
 
+set cursorline
+highlight clear CursorLine
+highlight LineNR ctermfg=242
+highlight CursorLineNR cterm=bold ctermfg=255
+highlight CursorLine ctermbg=237
+
+
 " Setting for javacompile
 " autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 " autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+
 
 " Setting for search
 set hlsearch
 set magic
 
-" Auto reload file
+
+" Setting for auto reload file
 set autoread
+
 
 " Setting for row control
 set linebreak
 set wrap
 
+
 " Setting for miniBufExplorer
-let g:miniBufExplMapCTabSwitchBufs=1
+" let g:miniBufExplMapCTabSwitchBufs=1
+
 
 " Settings for taglist
 let Tlist_Use_Right_Window=1
@@ -83,25 +97,31 @@ let Tlist_WinWidth=28
 let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close=1
 
+
 " Settings for tagbar
 let g:tagbar_phpctags_bin='$HOME/.vim/bundle/phpctags/phpctags'
 let g:tagbar_type_javascript = {
             \ 'ctagsbin' : 'jsctags'
             \ }
 
+
 " Setting for clang-complete
 let g:clang_use_library=1
+
 
 " Setting for powerline
 " let g:Powerline_symbols='compatible'
 " set t_Co=256
 
+
 " Setting for thrift
 au BufRead,BufNewFile *.thrift set filetype=thrift
 au! Syntax thrift source /usr/share/vim/vimfiles/syntax/thrift.vim
 
+
 " Setting for vim-erlang-tags
 set runtimepath^=/home/solomon/.vim/bundle/vim-erlang-tags
+
 
 " Setting for cscope setting
 if has("cscope")
@@ -138,26 +158,32 @@ nmap <C-@>D :scs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 
 set cscopequickfix=s-,d-,c-,t-,e-,f-,i-
 
+
 " Setting for vim-markdown
 let g:vim_markdown_folding_disabled=1
+
 
 " Setting for syntastic
 let g:syntastic_error_symbol='X'
 let g:syntastic_warning_symbol='!'
 let g:syntastic_python_checkers=['pylint']
 
+
 " Mapping
 inoremap <expr><CR> pumvisible()?"\<C-Y>":"\<CR>"
+
 
 " Restore cursor position
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
+
 " Setting for python-mode
 let g:pymode_run_key='R'
 let g:pymode_lint=0
 let g:pymode_indent=0
+
 
 " Setting for w3m
 highlight! link w3mLink      Function
@@ -171,6 +197,7 @@ highlight! link w3mAnchor    Label
 let g:w3m#disable_default_keymap=0
 let g:w3m#search_engine='%s'
 
+
 "Setting for ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp
 let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
@@ -181,11 +208,13 @@ let g:ctrlp_user_command=['.git', 'cd %s && git ls-files']
 let g:ctrlp_open_new_file='h'
 let g:ctrlp_working_path_mode='rw'
 
+
 "Setting for git-gutter
 highlight GitGutterAdd ctermbg=black ctermfg=green
 highlight GitGutterChange ctermbg=black ctermfg=yellow
 highlight GitGutterDelete ctermbg=black ctermfg=red
 highlight GitGutterChangeDelete ctermbg=black ctermfg=red
+
 
 "Setting for vim-airline
 let g:airline#extensions#tabline#enabled=1
