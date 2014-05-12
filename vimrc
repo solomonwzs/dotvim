@@ -244,3 +244,14 @@ function! AirlineThemePatch(palette)
     let a:palette.inactive.airline_c[2]=232
     let a:palette.inactive.airline_c[3]=240
 endfunction
+
+
+" Setting for tmuxline
+" let g:tmuxline_preset={
+"             \'a'    : '#S',
+"             \'b'    : '#W',
+"             \'win'  : '#I #W',
+"             \'cwin' : '#I #W #F',
+"             \'x'    : '#(uptime | cut -d, -f2,3,4,5)',
+"             \'y'    : '%F %R %a',
+"             \'z'    : '#(whoami)@#H'}
