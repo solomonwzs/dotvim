@@ -24,6 +24,8 @@ colorscheme candy
 let mapleader=","
 let g:mapleader=","
 
+map <leader>h :help <C-R>=expand("<cword>")<CR><CR>
+
 syntax enable
 
 set shiftwidth=4
@@ -204,12 +206,19 @@ let g:w3m#search_engine='%s'
 
 " Setting for ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp
-let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_switch_buffer='Et'
+let g:ctrlp_custom_ignore={
+            \ 'dir'     : '\v[\/]\.(git|hg|svn)$',
+            \ 'file'    : '\v\.(so|swp|zip|class|beam|tar)$'}
+let g:ctrlp_switch_buffer='e'
 let g:ctrlp_regexp=1
 let g:ctrlp_reuse_window='netrw\|help\|quickfix'
-let g:ctrlp_user_command=['.git', 'cd %s && git ls-files']
-let g:ctrlp_open_new_file='h'
+let g:ctrlp_user_command={
+            \ 'types'   : {
+            \ 1 : ['.git', 'cd %s && git ls-files'],
+            \ 2 : ['.hg', 'hg --cwd %s locate -I .']
+            \ },
+            \ 'fallback': 'find %s -type f'}
+" let g:ctrlp_open_new_file='h'
 let g:ctrlp_working_path_mode='rw'
 
 
