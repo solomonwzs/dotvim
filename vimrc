@@ -64,7 +64,7 @@ set cursorline
 highlight clear CursorLine
 highlight LineNR ctermfg=242
 highlight CursorLineNR cterm=bold ctermfg=255
-highlight CursorLine ctermbg=236
+highlight CursorLine ctermbg=237
 augroup CursorLine
     au!
     au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
@@ -251,7 +251,7 @@ function! AirlineThemePatch(palette)
     " let a:palette.inactive.airline_b[2]=244
 
     let a:palette.inactive.airline_c[2]=232
-    let a:palette.inactive.airline_c[3]=240
+    let a:palette.inactive.airline_c[3]=241
 endfunction
 
 
