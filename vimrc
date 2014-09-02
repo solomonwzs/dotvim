@@ -72,6 +72,10 @@ augroup CursorLine
 augroup END
 
 
+" Setting for ocamlmerlin
+set rtp+=/usr/share/ocamlmerlin/vim
+
+
 " Setting for javacompile
 " autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 " autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
@@ -173,6 +177,7 @@ let g:vim_markdown_folding_disabled=1
 let g:syntastic_error_symbol='X'
 let g:syntastic_warning_symbol='!'
 let g:syntastic_python_checkers=['pylint']
+let g:syntastic_ocaml_checkers=['merlin']
 
 
 " Mapping
