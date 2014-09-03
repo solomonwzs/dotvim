@@ -103,3 +103,12 @@
 [submodule "bundle/dockerfile-vim"]
 	path = bundle/dockerfile-vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
+[submodule "bundle/neco-ghc"]
+	path = bundle/neco-ghc
+	url = https://github.com/eagletmt/neco-ghc.git
+[submodule "bundle/vim-slime"]
+	path = bundle/vim-slime
+	url = https://github.com/jpalardy/vim-slime.git
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim

@@ -13,6 +13,14 @@ runtime! archlinux.vim
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+
+" Setting for ocamlmerlin (ocaml)
+set rtp+=/usr/share/ocamlmerlin/vim
+
+" Setting for cabal (haskell)
+let $PATH=$PATH.':'.expand("$HOME/.cabal/bin")
+
+
 " If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
 " Or better yet, read /usr/share/vim/vim72/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
@@ -56,6 +64,9 @@ autocmd Filetype xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd Filetype python setlocal omnifunc=pythoncomplete#CompleteTags
 autocmd Filetype tex setlocal omnifunc=syntaxcomplete#Complete
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+if executable('ghc-mod')
+    autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+endif
 
 let g:html_indent_inctags="li,body,head"
 autocmd FileType html,xml setlocal sw=2 tabstop=2 softtabstop=2
@@ -70,10 +81,6 @@ augroup CursorLine
     au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
     au WinLeave * setlocal nocursorline
 augroup END
-
-
-" Setting for ocamlmerlin
-set rtp+=/usr/share/ocamlmerlin/vim
 
 
 " Setting for javacompile
@@ -269,3 +276,9 @@ endfunction
 "             \'x'    : '#(uptime | cut -d, -f2,3,4,5)',
 "             \'y'    : '%F %R %a',
 "             \'z'    : '#(whoami)@#H'}
+
+
+" Setting for vim-slime
+let g:slime_target='tmux'
+let g:slime_paste_file='/tmp/.slime_paste'
+let g:slime_default_config={'socket_name': 'default', 'target_pane': '1'}
