@@ -82,6 +82,11 @@ augroup CursorLine
     au WinLeave * setlocal nocursorline
 augroup END
 
+highlight DiffAdd ctermbg=24
+highlight DiffChange ctermbg=53
+highlight DiffText ctermbg=226
+"highlight DiffText ctermbg=92
+
 
 " Setting for javacompile
 " autocmd Filetype java setlocal omnifunc=javacomplete#Complete
