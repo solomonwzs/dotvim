@@ -83,9 +83,9 @@ augroup CursorLine
 augroup END
 
 highlight DiffAdd ctermbg=24
+highlight DiffDelete ctermbg=81
 highlight DiffChange ctermbg=53
-highlight DiffText ctermbg=226
-"highlight DiffText ctermbg=92
+highlight DiffText ctermbg=243
 
 
 " Setting for javacompile
