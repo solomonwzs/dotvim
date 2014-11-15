@@ -188,7 +188,7 @@ let g:vim_markdown_folding_disabled=1
 " Setting for syntastic
 let g:syntastic_error_symbol='X'
 let g:syntastic_warning_symbol='!'
-let g:syntastic_python_checkers=['pylint']
+let g:syntastic_python_checkers=[]
 let g:syntastic_ocaml_checkers=['merlin']
 
 
@@ -204,8 +204,13 @@ endif
 
 " Setting for python-mode
 let g:pymode_run_key='R'
-let g:pymode_lint=0
+let g:pymode_lint=1
+let g:pymode_lint_unmodified=1
 let g:pymode_indent=0
+let g:pymode_lint_checkers=['pylint']
+
+let g:pymode_lint_todo_symbol='!'
+let g:pymode_lint_error_symbol='X'
 
 
 " Setting for w3m
