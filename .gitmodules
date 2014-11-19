@@ -49,9 +49,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/omnicppcomplete"]
-	path = bundle/omnicppcomplete
-	url = git://github.com/vim-scripts/OmniCppComplete.git
 [submodule "bundle/vim-voom"]
 	path = bundle/vim-voom
 	url = https://github.com/vim-scripts/VOoM.git
