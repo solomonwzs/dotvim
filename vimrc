@@ -29,8 +29,8 @@ set t_Co=256
 
 colorscheme candy
 
-let mapleader=","
-let g:mapleader=","
+let mapleader="\\"
+let localmapleader=","
 
 map <leader>h :help <C-R>=expand("<cword>")<CR><CR>
 
