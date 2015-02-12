@@ -115,3 +115,6 @@
 [submodule "bundle/vim-orgmode"]
 	path = bundle/vim-orgmode
 	url = https://github.com/jceb/vim-orgmode.git
+[submodule "bundle/ag-vim"]
+	path = bundle/ag-vim
+	url = https://github.com/rking/ag.vim.git
