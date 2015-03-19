@@ -123,8 +123,15 @@ set wrap
 
 " Settings for tagbar
 let g:tagbar_phpctags_bin='$HOME/.vim/bundle/phpctags/phpctags'
-let g:tagbar_type_javascript = {
+let g:tagbar_type_javascript={
             \ 'ctagsbin' : 'jsctags'
+            \ }
+let g:tagbar_type_mkd = {
+            \ 'ctagstype' : 'markdown',
+            \ 'kinds' : [
+            \   'h:headings'
+            \   ],
+            \ 'sort' : 0
             \ }
 
 
