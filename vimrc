@@ -219,6 +219,8 @@ let g:pymode_lint_checkers=['pylint']
 let g:pymode_lint_todo_symbol='!'
 let g:pymode_lint_error_symbol='X'
 
+let g:pymode_lint_cwindow=0
+
 
 " Setting for w3m
 highlight! link w3mLink      Function
