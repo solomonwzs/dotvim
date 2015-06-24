@@ -312,3 +312,6 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+" Setting for vim-lua-ftplugin
+let g:lua_complete_omni=1
