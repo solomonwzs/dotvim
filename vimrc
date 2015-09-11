@@ -33,6 +33,7 @@ let mapleader="\\"
 let maplocalleader=","
 
 map <leader>h :help <C-R>=expand("<cword>")<CR><CR>
+vmap <C-c> "+y
 
 syntax enable
 
@@ -45,6 +46,8 @@ set autoindent
 filetype plugin indent on
 
 set modeline
+
+set mouse=a
 
 set number
 set ruler
