@@ -200,8 +200,19 @@ let g:vim_markdown_folding_disabled=1
 let g:syntastic_error_symbol='X'
 let g:syntastic_warning_symbol='!'
 " let g:syntastic_python_checkers=['pylint']
-let g:syntastic_ignore_files = ['\.py$']
+let g:syntastic_ignore_files=['\.py$']
 let g:syntastic_ocaml_checkers=['merlin']
+let b:syntastic_skip_checks=0
+
+function s:syntastic_check_toggle()
+    if b:syntastic_skip_checks==0
+        let b:syntastic_skip_checks=1
+    else
+        let b:syntastic_skip_checks=0
+    endif
+endfunction
+
+command! -nargs=0 SyntasticCheckToggle call s:syntastic_check_toggle()
 
 
 " Mapping
@@ -319,6 +330,8 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 au FileType go nmap <Leader>gd <Plug>(go-doc)
 au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+let g:go_fmt_command = "goimports"
 
 " Setting for vim-lua-ftplugin
 let g:lua_complete_omni=1
