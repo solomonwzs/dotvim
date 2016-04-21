@@ -91,6 +91,9 @@ highlight DiffDelete ctermbg=81
 highlight DiffChange ctermbg=53
 highlight DiffText ctermbg=243
 
+highlight SignatureMarkLine ctermbg=96
+highlight SignatureMarkText cterm=bold ctermbg=96
+
 
 " Setting for javacompile
 " autocmd Filetype java setlocal omnifunc=javacomplete#Complete
