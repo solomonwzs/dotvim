@@ -93,6 +93,8 @@ highlight DiffText ctermbg=243
 
 highlight SignatureMarkLine ctermbg=96
 highlight SignatureMarkText cterm=bold ctermbg=96
+highlight SignatureMarkerLine ctermbg=95
+highlight SignatureMarkerText cterm=bold ctermbg=95
 
 
 " Setting for javacompile
