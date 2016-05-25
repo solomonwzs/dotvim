@@ -7,9 +7,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "bundle/clang-commplete"]
-	path = bundle/clang-commplete
-	url = git://github.com/Rip-Rip/clang_complete.git
 [submodule "bundle/drawit"]
 	path = bundle/drawit
 	url = git://github.com/vim-scripts/DrawIt.git
@@ -142,3 +139,6 @@
 [submodule "bundle/vim-signature"]
 	path = bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature.git
+[submodule "bundle/clang_complete"]
+	path = bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete.git
