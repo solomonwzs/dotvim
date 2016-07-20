@@ -73,7 +73,7 @@ if executable('ghc-mod')
 endif
 
 let g:html_indent_inctags="li,body,head"
-autocmd FileType html,xml setlocal sw=2 tabstop=2 softtabstop=2
+autocmd FileType html,xml,yaml setlocal sw=2 tabstop=2 softtabstop=2
 
 set cursorline
 highlight clear CursorLine
