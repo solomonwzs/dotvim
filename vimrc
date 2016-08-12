@@ -158,7 +158,7 @@ au! Syntax thrift source /usr/share/vim/vimfiles/syntax/thrift.vim
 
 
 " Setting for vim-erlang-tags
-set runtimepath^=/home/solomon/.vim/bundle/vim-erlang-tags
+set runtimepath^=$HOME/.vim/bundle/vim-erlang-tags
 
 
 " Setting for cscope setting
@@ -276,6 +276,16 @@ let g:ctrlp_reuse_window='netrw\|help\|quickfix'
 "            \ 'fallback': 'find %s -type f'}
 " let g:ctrlp_open_new_file='h'
 let g:ctrlp_working_path_mode='rw'
+
+
+" Setting for unite
+nmap <C-u>p :Unite -start-insert -auto-resize file file_rec/async<CR>
+nmap <C-u>g :Unite grep:.<CR>
+if executable('ag')
+    let g:unite_source_grep_command = 'ag'
+    let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+    let g:unite_source_grep_recursive_opt = ''
+endif
 
 
 " Setting for git-gutter
