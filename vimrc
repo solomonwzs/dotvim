@@ -207,6 +207,7 @@ let g:syntastic_warning_symbol='!'
 " let g:syntastic_python_checkers=['pylint']
 let g:syntastic_ignore_files=['\.py$']
 let g:syntastic_ocaml_checkers=['merlin']
+let g:syntastic_go_checkers = ['go']
 
 function s:syntastic_check_toggle()
     if !exists("b:syntastic_skip_checks")
