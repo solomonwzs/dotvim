@@ -348,5 +348,7 @@ au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 
 let g:go_fmt_command = "goimports"
 
+let $GOPATH .= ":".getcwd()
+
 " Setting for vim-lua-ftplugin
 let g:lua_complete_omni=1
