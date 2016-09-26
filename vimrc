@@ -58,6 +58,11 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=1
 
+set noea
+
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor="latex"
 
