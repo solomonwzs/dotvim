@@ -270,7 +270,7 @@ let g:w3m#search_engine='%s'
 " set wildignore+=*/tmp/*,*.so,*.swp
 let g:ctrlp_custom_ignore={
             \ 'dir'     : '\v[\/]\.(git|hg|svn)$',
-            \ 'file'    : '\v\.(so|swp|zip|class|beam|tar|gz|o)$'}
+            \ 'file'    : '\v\.(so|swp|zip|class|beam|tar|gz|o|pyc)$'}
 let g:ctrlp_switch_buffer='e'
 let g:ctrlp_regexp=1
 let g:ctrlp_reuse_window='netrw\|help\|quickfix'
