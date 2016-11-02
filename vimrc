@@ -136,6 +136,7 @@ set wrap
 
 
 " Settings for tagbar
+let g:tagbar_ctags_bin="/usr/bin/ctags"
 let g:tagbar_phpctags_bin='$HOME/.vim/bundle/phpctags/phpctags'
 let g:tagbar_type_javascript={
             \ 'ctagsbin' : 'jsctags'
