@@ -237,6 +237,8 @@ endif
 
 " Setting for python-mode
 " let g:pymode=0
+let g:pymode_options_colorcolumn=0
+
 let g:pymode_run=1
 let g:pymode_run_key='<leader>r'
 
