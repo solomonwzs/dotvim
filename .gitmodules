@@ -142,6 +142,3 @@
 [submodule "bundle/unite-vim"]
     path = bundle/unite-vim
     url = https://github.com/Shougo/unite.vim.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
