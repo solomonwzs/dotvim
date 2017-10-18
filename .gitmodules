@@ -145,3 +145,6 @@
 [submodule "bundle/unite-vim"]
 	path = bundle/unite-vim
 	url = https://github.com/Shougo/unite.vim.git
+[submodule "bundle/tagbar-markdown"]
+	path = bundle/tagbar-markdown
+	url = https://github.com/lvht/tagbar-markdown.git
