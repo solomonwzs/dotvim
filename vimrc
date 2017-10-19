@@ -359,3 +359,6 @@ let $GOPATH .= ":".getcwd()
 
 " Setting for vim-lua-ftplugin
 let g:lua_complete_omni=1
+
+" Setting for vim-commentary
+autocmd FileType nginx setlocal commentstring=#\ %s
