@@ -145,9 +145,9 @@
 [submodule "bundle/tagbar-markdown"]
 	path = bundle/tagbar-markdown
 	url = https://github.com/lvht/tagbar-markdown.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
