@@ -284,6 +284,9 @@ let g:ctrlp_reuse_window='netrw\|help\|quickfix'
 "            \ 'fallback': 'find %s -type f'}
 " let g:ctrlp_open_new_file='h'
 let g:ctrlp_working_path_mode='rw'
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 
 " Setting for unite
@@ -362,3 +365,8 @@ let g:lua_complete_omni=1
 
 " Setting for vim-commentary
 autocmd FileType nginx setlocal commentstring=#\ %s
+
+" Setting for ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
