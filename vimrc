@@ -406,3 +406,9 @@ let g:tagbar_type_rust = {
             \       'i:impls,trait implementations',
             \   ]
             \}
+
+
+" Setting for ycm
+let g:ycm_server_python_interpreter = "python2"
+let g:ycm_global_ycm_extra_conf = "/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_key_list_stop_completion = ['<CR>']
