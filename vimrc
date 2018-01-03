@@ -138,15 +138,15 @@ set wrap
 " Settings for tagbar
 let g:tagbar_phpctags_bin='$HOME/.vim/bundle/phpctags/phpctags'
 let g:tagbar_type_javascript={
-            \ 'ctagsbin' : 'jsctags'
-            \ }
+            \   'ctagsbin': 'jsctags'
+            \}
 let g:tagbar_type_mkd = {
-            \ 'ctagstype' : 'markdown',
-            \ 'kinds' : [
-            \   'h:headings'
+            \   'ctagstype': 'markdown',
+            \   'kinds': [
+            \       'h:headings'
             \   ],
-            \ 'sort' : 0
-            \ }
+            \   'sort': 0
+            \}
 
 
 " Setting for clang-complete
@@ -213,6 +213,7 @@ let g:syntastic_warning_symbol='!'
 let g:syntastic_ignore_files=['\.py$']
 let g:syntastic_ocaml_checkers=['merlin']
 let g:syntastic_go_checkers = ['go']
+" let g:syntastic_rust_checkers = ['rustc']
 
 function s:syntastic_check_toggle()
     if !exists("b:syntastic_skip_checks")
@@ -271,8 +272,9 @@ let g:w3m#search_engine='%s'
 " Setting for ctrlp
 " set wildignore+=*/tmp/*,*.so,*.swp
 let g:ctrlp_custom_ignore={
-            \ 'dir'     : '\v[\/]\.(git|hg|svn)$',
-            \ 'file'    : '\v\.(so|swp|zip|class|beam|tar|gz|o|pyc)$'}
+            \   'dir'  : '\v[\/]\.(git|hg|svn)$',
+            \   'file' : '\v\.(so|swp|zip|class|beam|tar|gz|o|pyc)$'
+            \}
 let g:ctrlp_switch_buffer='e'
 let g:ctrlp_regexp=1
 let g:ctrlp_reuse_window='netrw\|help\|quickfix'
@@ -348,6 +350,7 @@ let g:slime_target='tmux'
 let g:slime_paste_file='/tmp/.slime_paste'
 let g:slime_default_config={'socket_name': 'default', 'target_pane': '1'}
 
+
 " Setting for vim-go
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
@@ -360,13 +363,46 @@ let g:go_fmt_command = "goimports"
 
 let $GOPATH .= ":".getcwd()
 
+
 " Setting for vim-lua-ftplugin
 let g:lua_complete_omni=1
 
+
 " Setting for vim-commentary
 autocmd FileType nginx setlocal commentstring=#\ %s
+
 
 " Setting for ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+
+" Setting for rust
+let g:rustfmt_autosave = 1
+
+" ~/.ctags
+" --langdef=Rust
+" --langmap=Rust:.rs
+" --regex-Rust=/^[ \t]*(#\[[^\]]\][ \t]*)*(pub[ \t]+)?(extern[ \t]+)?("[^"]+"[ \t]+)?(unsafe[ \t]+)?fn[ \t]+([a-zA-Z0-9_]+)/\6/f,functions,function definitions/
+" --regex-Rust=/^[ \t]*(pub[ \t]+)?type[ \t]+([a-zA-Z0-9_]+)/\2/T,types,type definitions/
+" --regex-Rust=/^[ \t]*(pub[ \t]+)?enum[ \t]+([a-zA-Z0-9_]+)/\2/g,enum,enumeration names/
+" --regex-Rust=/^[ \t]*(pub[ \t]+)?struct[ \t]+([a-zA-Z0-9_]+)/\2/s,structure names/
+" --regex-Rust=/^[ \t]*(pub[ \t]+)?mod[ \t]+([a-zA-Z0-9_]+)/\2/m,modules,module names/
+" --regex-Rust=/^[ \t]*(pub[ \t]+)?(static|const)[ \t]+(mut[ \t]+)?([a-zA-Z0-9_]+)/\4/c,consts,static constants/
+" --regex-Rust=/^[ \t]*(pub[ \t]+)?(unsafe[ \t]+)?trait[ \t]+([a-zA-Z0-9_]+)/\3/t,traits,traits/
+" --regex-Rust=/^[ \t]*(pub[ \t]+)?(unsafe[ \t]+)?impl([ \t\n]*<[^>]*>)?[ \t]+(([a-zA-Z0-9_:]+)[ \t]*(<[^>]*>)?[ \t]+(for)[ \t]+)?([a-zA-Z0-9_]+)/\5 \7 \8/i,impls,trait implementations/
+" --regex-Rust=/^[ \t]*macro_rules![ \t]+([a-zA-Z0-9_]+)/\1/d,macros,macro definitions/
+let g:tagbar_type_rust = {
+            \   'ctagstype' : 'rust',
+            \   'kinds' : [
+            \       'T:types,type definitions',
+            \       'f:functions,function definitions',
+            \       'g:enum,enumeration names',
+            \       's:structure names',
+            \       'm:modules,module names',
+            \       'c:consts,static constants',
+            \       't:traits',
+            \       'i:impls,trait implementations',
+            \   ]
+            \}
