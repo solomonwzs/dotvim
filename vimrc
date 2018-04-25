@@ -13,6 +13,11 @@ runtime! archlinux.vim
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" Encrypt
+set cm=blowfish2
+set viminfo=
+set nobackup
+set nowritebackup
 
 " Setting for ocamlmerlin (ocaml)
 set rtp+=/usr/share/ocamlmerlin/vim
